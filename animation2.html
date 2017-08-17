@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Duxmeng-170617-progress-bar</title>
+	</head>
+	<style type="text/css">
+	/*************13天的psd文件不知道什么原因无法下载  所以先做14 15*******************/
+		*{padding:0;margin:0;box-sizing: border-box;}
+		ul li{list-style: none;}
+		body {
+	      color: #808494; 
+	      font-size: 12px;
+	      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	    }
+		.progress-wrapper{
+			width: 400px;
+			padding: 35px 45px;
+			background: #252525;
+			margin: 30px auto 0;
+		}
+		.progress-item{
+			text-align: center;
+		}
+		.progress-bar{
+			height: 23px;
+			padding: 3px;
+			background: #1a1a1a;
+			border:1px solid #151515;
+			border-radius: 8px;
+			margin: 10px 0 5px;
+		}
+		.progress{
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+			border-radius: 5px;
+			background-image:linear-gradient(to bottom,#f76c41,#f72610);
+		}
+		.progress:after{
+			content: "";
+			position: absolute;
+			top: -500px;
+      		left: -500px;
+     		right: -500px;
+      		bottom: -500px;
+			transform: rotate(45deg);
+      		background: transparent;
+            background-image:linear-gradient(90deg, #fd6207 1px, transparent 0);
+            background-size: 3px 3px;
+		}
+		.red{
+			width: 19%;
+			-webkit-animation: processRed 1s linear;
+	        animation: processRed 1s linear;
+		}
+		.orange{
+			width: 49%;
+			background-image:linear-gradient(to bottom,#f9b03d,#e96904);
+			-webkit-animation: processOrange 1s linear;
+	        animation: processOrange 1s linear;
+		}
+		.orange:after{
+			 background-image:linear-gradient(90deg, #ef8f3c 1px, transparent 0);
+		}
+		.yellow{
+			width: 81%;
+			background-image:linear-gradient(to bottom,#f7d337,#f2a20d);
+			-webkit-animation: processYellow 1s linear;
+	        animation: processYellow 1s linear;
+		}
+		.yellow:after{
+			 background-image:linear-gradient(90deg, #f7b746 1px, transparent 0);
+		}
+		.green{
+			width: 100%;
+			background-image:linear-gradient(to bottom,#befb31,#88ef0c);
+			-webkit-animation: processGreen 1s linear;
+	        animation: processGreen 1s linear;
+		}
+		.green:after{
+			 background-image:linear-gradient(90deg, #aaf623 1px, transparent 0);
+		}
+		@-webkit-keyframes processRed {
+	        0% { 
+	        	width: 0; 
+	        }
+	        100% { 
+				width: 19%;
+	        }
+	    }
+	    @keyframes processRed {
+	        0% { 
+	        	width: 0; 
+	        }
+	        100% { 
+				width:19%;
+	        }
+	    }
+	    @-webkit-keyframes processOrange {
+	        0% { 
+	        	width: 0; 
+	        }
+	        100% { 
+				width: 49%;
+	        }
+	    }
+	    @keyframes processOrange {
+	        0% { 
+	        	width: 0; 
+	        }
+	        100% { 
+				width:49%;
+	        }
+	    }
+	    @-webkit-keyframes processYellow {
+	        0% { 
+	        	width: 0; 
+	        }
+	        100% { 
+				width: 81%;
+	        }
+	    }
+	    @keyframes processYellow {
+	        0% { 
+	        	width: 0; 
+	        }
+	        100% { 
+				width:81%;
+	        }
+	    }
+	    @-webkit-keyframes processGreen {
+	        0% { 
+	        	width: 0; 
+	        }
+	        100% { 
+				width: 81%;
+	        }
+	    }
+	    @keyframes processGreen {
+	        0% { 
+	        	width: 0; 
+	        }
+	        100% { 
+				width:100%;
+	        }
+	    }
+	</style>
+	<body>
+		<ul class="progress-wrapper">
+			<li class="progress-item">
+				<div class="progress-bar">
+					<div class="progress red"></div>
+				</div>
+				<p>19%</p>
+			</li>
+			<li class="progress-item">
+				<div class="progress-bar">
+					<div class="progress orange"></div>
+				</div>
+				<p>49%</p>
+			</li>
+			<li class="progress-item">
+				<div class="progress-bar">
+					<div class="progress yellow"></div>
+				</div>
+				<p>81%</p>
+			</li>
+			<li class="progress-item">
+				<div class="progress-bar">
+					<div class="progress green"></div>
+				</div>
+				<p>Download Complete!</p>
+			</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .clearfix {
+            zoom: 1
+        }
+
+        .wrapper {
+            width: 242px;
+            border: 1px solid #cdd3d7;
+            margin: 50px auto;
+        }
+
+        .title {
+            background-color: #eff2f6;
+            height: 40px;
+            font-size: 12px;
+            line-height: 40px;
+            position: relative;
+        }
+
+        .title_left {
+            margin-left: 16px;
+            float: left;
+        }
+
+        .title_right {
+            display: inline-block;
+            float: right;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin: -7.5px 16px 0 0;
+
+        }
+
+        .title_right p {
+            display: block;
+            height: 3px;
+            width: 20px;
+            background-color: #8c959d;
+            margin-bottom: 3px;
+        }
+
+        .title_right p:last-child {
+            margin-bottom: 0;
+        }
+
+        /*input*/
+        .list {
+            position: relative;
+            min-height: 50px;
+        }
+
+        input {
+            float: left;
+            -webkit-appearance: none;
+        }
+
+        label {
+            border-radius: 100%;
+            cursor: pointer;
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            width: 25px;
+            height: 25px;
+            background: #eee;
+            border: 1px solid #ddd;
+        }
+
+        label:after {
+            opacity: 0;
+            content: '';
+            width: 9px;
+            height: 5px;
+            background: transparent;
+            position: absolute;
+            top: 6px;
+            left: 7px;
+            border: 3px solid #333;
+            border-top: none;
+            border-right: none;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        input[type=checkbox]:checked + label {
+            border: 1px solid pink;
+        }
+
+        input[type=checkbox]:checked + label:after {
+            opacity: 1;
+            border: 3px solid pink;
+            border-top: none;
+            border-right: none;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        input[type=checkbox]:checked ~ div {
+            color: #00bbfd;
+            text-decoration: line-through;
+        }
+
+        .list_right {
+            margin-left: 55px;
+            overflow: hidden;
+            min-width: 50px;
+            word-wrap: break-word;
+            font-size: 10px;
+            line-height: 20px;
+            padding-top: 17px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="title clearfix">
+        <p class="title_left">Tasks</p>
+        <div class="title_right">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+    <ul>
+        <li class="list">
+            <input type="checkbox" value="1" id="checkboxFiveInput" name=""/>
+            <label for="checkboxFiveInput"></label>
+            <div class="list_right">On your mark</div>
+        </li>
+        <li class="list">
+            <input type="checkbox" value="1" id="checkboxFiveInput1" name=""/>
+            <label for="checkboxFiveInput1"></label>
+            <div class="list_right">Get set</div>
+        </li>
+        <li class="list">
+            <input type="checkbox" value="1" id="checkboxFiveInput2" name=""/>
+            <label for="checkboxFiveInput2"></label>
+            <div class="list_right">GO!</div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

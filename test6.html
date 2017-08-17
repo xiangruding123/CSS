@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clarence-170625-Transform_3D_Box</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-size: 12px;
+      color: #454545;
+      font-family: sans-serif;
+    }
+    .main {
+      height: 100vh;
+      width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      cursor: pointer;
+    }
+    .rotateBox{
+      overflow:hidden;
+      width: 12.5%;
+      height: 100%;
+      float: left;
+      position: relative;
+      perspective:600px;
+    }
+    .transBox,
+    .transBox .front,
+    .transBox .back {
+      width: 100%;
+      height: 100%;
+    }
+    .transBox{
+      transform-style: preserve-3d;
+      transform-origin:center center -75px;
+      position:absolute;
+      top: 0;
+      left: 0;
+      transition:.5s;
+    }
+    .rotateBox:hover .transBox {
+      transform: rotateY(-90deg);
+    }
+    .back{
+      position: absolute;
+      left: 200px;
+      top:0;
+      transform-origin: left;
+      transform: rotateY(90deg);
+    }
+    .rotateBox:nth-child(1) .front{background: #358fc9;}
+    .rotateBox:nth-child(2) .front{background: #40c666;}
+    .rotateBox:nth-child(3) .front{background: #dec345;}
+    .rotateBox:nth-child(4) .front{background: #ee9833;}
+    .rotateBox:nth-child(5) .front{background: #db593b;}
+    .rotateBox:nth-child(6) .front{background: #c04067;}
+    .rotateBox:nth-child(7) .front{background: #a569d7;}
+    .rotateBox:nth-child(8) .front{background: #6156c3;}
+
+    .rotateBox:nth-child(1) .back{background: #2271b6;}
+    .rotateBox:nth-child(2) .back{background: #2ab248;}
+    .rotateBox:nth-child(3) .back{background: #d2ae2e;}
+    .rotateBox:nth-child(4) .back{background: #e87a21;}
+    .rotateBox:nth-child(5) .back{background: #ce3d26;}
+    .rotateBox:nth-child(6) .back{background: #aa2a49;}
+    .rotateBox:nth-child(7) .back{background: #894ac8;}
+    .rotateBox:nth-child(8) .back{background: #443bae;}
+
+    .ico{
+      font-size: 120px;
+      opacity: .5;
+      text-transform:capitalize;
+      font-weight: bold;
+      text-align: center;
+      position: relative;
+      top: 50%;left: 50%;
+      transform:translate(-50%,-50%);
+    }
+
+    .text{
+      top:50%;
+      position:relative;
+      clear:both;
+      margin-top:-40px;
+      height:40px;
+      text-align:center;
+      line-height:40px;
+      overflow:hidden;
+      width:100%;
+      color:#FFF;
+      font-size:14px;
+    }
+    .an{
+      top:50%;
+      position:relative;
+      width:120px;
+      height:40px;
+      line-height:40px;
+      overflow:hidden;
+      display:block;
+      text-align:center;
+      font-size:14px;
+      background:#40c666;
+      color:#FFF;
+      text-decoration:none;
+      border-radius:3px;
+      margin-top:10px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="main box">
+    <div class="rotateBox">
+        <div class="transBox">
+            <div class="list_1 front">
+              <div class="ico">Ps</div>
+            </div>
+            <div class="list_1 back">
+                <div class="ico">Ps</div>
+                <div class="text">Photoshop CC</div>
+                <a href="##" target="_blank" class="an">Windows</a>
+                <a href="##" target="_blank" class="an">MAC</a>
+            </div>
+        </div>
+    </div>
+    <div class="rotateBox">
+        <div class="transBox">
+            <div class="list_1 front">
+                <div class="ico">Dw</div>
+            </div>
+            <div class="list_1 back">
+                <div class="ico">Dw</div>
+                <div class="text">Dreamweaver CC</div>
+                <a href="##" target="_blank" class="an">Windows</a>
+                <a href="##" target="_blank" class="an">MAC</a>
+            </div>
+        </div>
+    </div>
+    <div class="rotateBox">
+        <div class="transBox">
+            <div class="list_1 front">
+                <div class="ico">Fw</div>
+            </div>
+            <div class="list_1 back">
+                <div class="ico">Fw</div>
+                <div class="text">Fireworks CS6</div>
+                <a href="##" target="_blank" class="an">Windows</a>
+                <a href="##" target="_blank" class="an">MAC</a>
+            </div>
+        </div>
+    </div>
+    <div class="rotateBox">
+        <div class="transBox">
+            <div class="list_1 front">
+                <div class="ico">Ai</div>
+            </div>
+            <div class="list_1 back">
+                <div class="ico">Ai</div>
+                <div class="text">Illustrator CC</div>
+                <a href="##" target="_blank" class="an">Windows</a>
+                <a href="##" target="_blank" class="an">MAC</a>
+            </div>
+        </div>
+    </div>
+    <div class="rotateBox">
+        <div class="transBox">
+            <div class="list_1 front">
+                <div class="ico">Fl</div>
+            </div>
+            <div class="list_1 back">
+                <div class="ico">Fl</div>
+                <div class="text">Flash Professional CS6</div>
+                <a href="##" target="_blank" class="an">Windows</a>
+                <a href="##" target="_blank" class="an">MAC</a>
+            </div>
+        </div>
+    </div>
+    <div class="rotateBox">
+        <div class="transBox">
+            <div class="list_1 front">
+                <div class="ico">Id</div>
+            </div>
+            <div class="list_1 back">
+                <div class="ico">Id</div>
+                <div class="text">InDesign CS6</div>
+                <a href="##" target="_blank" class="an">Windows</a>
+                <a href="##" target="_blank" class="an">MAC</a>
+            </div>
+        </div>
+    </div>
+    <div class="rotateBox">
+        <div class="transBox">
+            <div class="list_1 front">
+                <div class="ico">Pr</div>
+            </div>
+            <div class="list_1 back">
+                <div class="ico">Pr</div>
+                <div class="text">Premiere Pro CC</div>
+                <a href="##" target="_blank" class="an">Windows</a>
+                <a href="##" target="_blank" class="an">MAC</a>
+            </div>
+        </div>
+    </div>
+    <div class="rotateBox">
+        <div class="transBox">
+            <div class="list_1 front">
+                <div class="ico">Ae</div>
+            </div>
+            <div class="list_1 back">
+                <div class="ico">Ae</div>
+                <div class="text">After Effects CC</div>
+                <a href="##" target="_blank" class="an">Windows</a>
+                <a href="##" target="_blank" class="an">MAC</a>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

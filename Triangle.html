@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.cont{
+				position: relative;
+				width: 200px;
+				height: 100px;
+				margin: 10%;
+			}
+			.cont1{
+				background: magenta;
+			}
+			.cont2{
+				background: aqua;
+			}
+			.cont3{
+				background: #ddd;
+			}
+			/*===========*/
+.cont1:after {
+    position: absolute;
+    content: '';
+    left: 28px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 12px solid #fff;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+/*===========*/
+.cont2:after{
+   content: "";
+   position: absolute;
+   /*left: 160px;*/
+   left: 45%;
+   top: -14px;
+   width: 0;
+   height: 0;
+   border-left: 9px solid transparent;
+   border-right: 9px solid transparent;
+   border-bottom: 15px solid #c0c3d2; 	
+}
+ /*========*/
+.cont3:after {
+  	content: "";
+  	position: absolute;
+  	border-left: 1px solid #000;
+  	border-bottom: 1px solid #000;
+  	bottom: -12px;
+  	right: 45%;
+  	background: #000;
+  	transform: rotate(-45deg);
+  	z-index: 1;
+  	width: 22px;
+  	height: 22px;
+  	border-radius: 2px;
+}
+		</style>
+	</head>
+	<body>
+		<div class="cont cont1"></div>
+		<div class="cont cont2"></div>
+		<div class="cont cont3"></div>
+	</body>
+</html>

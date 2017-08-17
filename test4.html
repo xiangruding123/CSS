@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#item{
+				width: 100%;
+				height: 100px;
+				background: #eee;
+				position: relative;
+			}
+			#item .task-item{
+				position:absolute;
+				top: 50%;right:15px;
+				margin-top:-7px;
+				width: 19px;height: 9px;
+				cursor: pointer;
+				border-top:3px solid #8c959d;
+				border-bottom:3px solid #8c959d;
+			}
+			#item .task-item:after{
+				content:"";
+				width: 100%;height: 3px;
+				display: inline-block;
+				background: #8c959d;
+				position: absolute;
+				top: 3px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="item">
+			<div class="task-item"><i></i></div>
+		</div>
+	</body>
+</html>

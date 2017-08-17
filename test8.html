@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Duxmeng-170707-simple-styles</title>
+	</head>
+	<style type="text/css">
+		*{padding:0;margin:0;box-sizing: border-box;}
+		hr{border:0 none;} 
+		html,body{height: 100%;}
+		body {
+	      	color: #444;
+			font-size: 14px;
+	      	background: #d0d0d0;
+	      	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	    }
+	    .container{
+	    	width: 800px;
+	    	margin: 30px auto 0;
+	    }
+	    .line-one{border-top: 1px solid #999;}
+	    .line-two{border-top: 3px double #999;}
+	    .line-three{border-top:1px dashed #999;}
+	    .line-four{border-top:1px dotted #999;}
+	    .line-five{background: #fff;border-top:2px dashed #999;}
+	    .line-six{background: #fff;border-top:2px dotted #999;}
+	    .line-seven{border-top:1px solid #999;border-bottom:1px solid #fff;}
+	    .line-eight{border-top:1px solid #999;border-bottom:1px solid #fff;}
+	    .line-eight:after{
+	    	content: "";
+	    	display: block;
+	    	border-top:1px solid #999;border-bottom:1px solid #fff;
+	    	margin-top: 2px;
+	   	}
+	    .line-nine{height: 6px;position: relative;overflow: hidden;}
+	    .line-nine:after{
+	    	content: "";
+	    	position: absolute;
+	    	top: -500px;
+      		left: -500px;
+     		right: -500px;
+      		bottom: -500px;
+			transform: rotate(45deg);
+      		background: transparent;
+            background-image:linear-gradient(90deg, #999 1px, transparent 0);
+            background-size: 4px 4px;
+	    }
+	    .line-ten{border-top:1px dotted #999;border-bottom:1px dotted #fff;}
+
+	    .line-twelve{
+	    	height: 10px;
+	    	box-shadow: 0 10px 10px -10px rgba(0,0,0,.5) inset;
+	    }
+	    .line-thirteen{
+	    	height: 1px;
+	    	background-image: linear-gradient(to left, transparent, #8c8b8b, transparent);
+	    }
+	    .line-fourteen{
+	    	height: 6px;
+	    	background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
+	    	border: 0;
+	    }
+		.line-fifteen{border-top:4px double #8c8b8b;margin-top: 20px;text-align: center;}
+	    .line-fifteen:after{
+	    	content: "\002665";
+	    	display: inline-block;
+	    	position:relative;
+	    	top: -12px;
+			padding: 0 10px;
+			background: #d0d0d0;
+			color: #8c8b8b;
+			font-size: 18px;
+	    }
+		.line-sixteen{border-top:1px dashed #999;margin-top: 20px;}
+	    .line-sixteen:after{
+	    	content: "\002702";
+	    	display: inline-block;
+	    	position:relative;
+	    	top: -14px;
+	    	left: 20px;
+			padding: 0 10px;
+			background: #d0d0d0;
+			color: #8c8b8b;
+			font-size: 18px;
+	    }
+	    .line-seventeen{border-top:1px solid #999;text-align: center;margin-top: 20px;}
+	    .line-seventeen:after{
+	    	content: "§";
+	    	display: inline-block;
+	    	position:relative;
+	    	top: -14px;
+			padding: 0 10px;
+			background: #d0d0d0;
+			color: #8c8b8b;
+			font-size: 18px;
+			transform: rotate(60deg);
+	    }
+	    .line-eighteen{
+	    	height: 30px;
+	    	border-style: solid;
+	    	border-color: #999;
+	    	border-width: 1px 0 0 0;
+	    	border-radius: 20px;
+	    }
+	    .line-eighteen:before{
+	    	content:"";
+	    	display: block;
+	    	height: 30px;
+	    	margin-top: -31px;
+	    	border-style: solid;
+	    	border-color: #8c8b8b;
+	    	border-width: 0 0 1px 0;
+	    	border-radius: 20px; 
+	    }
+	</style>
+	<body>
+		<div class="container">
+			<hr class="line-one"><br>
+			<hr class="line-two"><br>
+			<hr class="line-three"><br>
+			<hr class="line-four"><br>
+			<hr class="line-five"><br>
+			<hr class="line-six"><br>
+			<hr class="line-seven"><br>
+			<hr class="line-eight"><br>
+			<hr class="line-nine"><br>
+			<hr class="line-ten"><br>
+			<hr class="line-eleven"><br>
+			<hr class="line-twelve"><br>
+			<hr class="line-thirteen"><br>
+			<hr class="line-fourteen"><br>
+			<hr class="line-fifteen"><br>
+			<hr class="line-sixteen"><br>
+			<hr class="line-seventeen"><br>
+			<hr class="line-eighteen"><br>
+		</div>
+	</body>
+</html>

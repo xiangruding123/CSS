@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Duxmeng-170726-css-animation</title>
+    <style>
+    * {margin: 0;padding: 0;}
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+    ul li{list-style: none;}
+    html,
+    body {width: 100%;height: 100%;background: #f5f5f5;}
+    a,
+    a:hover,
+    a:active {
+        text-decoration: none;
+    }
+    .square-wrapper {
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        margin: 50px auto 0;
+        transform-origin: 50% 50%;
+        animation: run 10s linear infinite;
+        animation-play-state: paused;
+    }
+    .square-wrapper:hover {animation-play-state: running;}
+    .square {
+        width: 100px;
+        height: 100px;
+        background: #5948ce;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: 50% 50%;
+        transition: transform 2s;
+    }
+    .square:first-child {transform: rotate(18deg);}
+    .square:nth-child(2) {transform: rotate(36deg);}
+    .square:nth-child(3) {transform: rotate(54deg);}
+    .square:nth-child(4) {transform: rotate(72deg);}
+    .square:nth-child(5) {transform: rotate(90deg);}
+    @keyframes run {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="square-wrapper">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+</body>
+</html>
